@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>An affair with the traditional weaves - Sarees from India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header_home">
+            <nav class="nav_container">
+                <a href=".body_content" class="tab">Home</a>
+                <a href=".saree_container" class="tab">Shop</a>
+                <a href="#subscribe" class="tab">Subscribe</a>
+                <a href="#footer" class="tab">Connect</a>
+            </nav>
+            <div class="title_container">
+                <h1 class="main-title">An affair with the traditional weaves<br>
+                    <span class="sub-title">Sarees from India</span>
+                </h1>
+            </div>
+        </header>
+        <div class="body_content">
+            <div class="articles">
+                <div class="featured_sarees">
+                    <h2 class="title2">Must-have Sarees from India</h2>
+                    <div class="saree_container" id="sareeContainer">
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="featured_sarees" id="subscribe">
+                <h2>Subscribe</h2>
+                <div class="sub_box">
+                    <div class="subscribe_content">
+                        <h3 class="title2">Don't miss our blog post!</h3>
+                        <input type="email" name="email" placeholder="email please">
+                        <button class="btn">Sign-up Now!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollTop">
+                <button class="topBtn" onclick="handleClick()">Go to Top</button>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook-square">
+            </a>
+            <a href="#" target="_blank" class="fa fa-twitter-square">
+            </a>
+            <a href="#" target="_blank" class="fa fa-pinterest"></a>
+        </footer>
+    </div>
+    </div>
+</body>
+<script>
+    var data = {
+        products: [
+            {
+                "imageFileName": "saree4.jpeg",
+                "title": "Banarsi Sarees",
+                "content": `Banaras or Varanasi is an ancient and one of the richest weaving centers of India.
+                                    The Banarasi silk sarees with their rich embossed effect (brocade), fine silk
+                                    fabric,
+                                    and opulence are also often one of the heaviest saris in the Indian women’s
+                                    wardrobes.
+                                    They have heavy brocading or metallic zari on borders and pallavs and a favorite of
+                                    North Indian brides. You can know all about grand Banarasi in this detailed
+                                    article from here.
+                                   
+                                    Wear It – these heavy and rich saris are a perfect choice for weddings, be it yours
+                                    or a close friend’s or relative’s nuptials. They are also apt for traditional
+                                    celebrations
+                                    and festivals like Diwali and Raksha Bandhan. Many also prefer to give these classy
+                                    and evergreen drapes as wedding gifts and as gifts to special relations.`,
+                "productName": "Banarsi Sarees",
+                "productId": "saree4",
+                "vendors": [
+                    {
+                        "vendorId": "vendor1",
+                        "vendorName": "Etsy",
+                        "price": "12",
+                        "baseLink": "https://www.etsy.com/in-en/listing",
+                        "vendorProductId": "667282692"
+                    },
+                    {
+                        "vendorId": "vendor2",
+                        "vendorName": "Mirraw",
+                        "price": "25",
+                        "baseLink": "https://www.mirraw.com/designers/vasu-sarees/designs",
+                        "vendorProductId": "purple-georgette-pakistani-salwar-kameez-pakistani-salwar-kameez--c6803b44-986c-4b98-8384-dcae00dfd000"
+                    },
+                    {
+                        "vendorId": "vendor3",
+                        "vendorName": "Amazon",
+                        "price": "18",
+                        "baseLink": "https://www.amazon.in/gp/product",
+                        "vendorProductId": "B009WG85ZA"
+                    }
+            
+                ]
+            },
+            {
+                "imageFileName": "Saree_2.jpeg",
+                "title": "Paithani Sarees",
+                "content": `Paithani Sarees is an ancient and one of the richest weaving centers of India.
+                                    The Banarasi silk sarees with their rich embossed effect (brocade), fine silk
+                                    fabric,
+                                    and opulence are also often one of the heaviest saris in the Indian women’s
+                                    wardrobes.
+                                    They have heavy brocading or metallic zari on borders and pallavs and a favorite of
+                                    North Indian brides. You can know all about grand Banarasi in this detailed
+                                    article from here.
+                                   
+                                    Wear It – these heavy and rich saris are a perfect choice for weddings, be it yours
+                                    or a close friend’s or relative’s nuptials. They are also apt for traditional
+                                    celebrations
+                                    and festivals like Diwali and Raksha Bandhan. Many also prefer to give these classy
+                                    and evergreen drapes as wedding gifts and as gifts to special relations.`,
+                "productName": "Paithani Sarees",
+                "productId": "Saree_2",
+                "vendors": [
+                    {
+                        "vendorId": "vendor1",
+                        "vendorName": "Etsy",
+                        "price": "12",
+                        "baseLink": "https://www.etsy.com/in-en/listing",
+                        "vendorProductId": "667282692"
+                    },
+                    {
+                        "vendorId": "vendor2",
+                        "vendorName": "Mirraw",
+                        "price": "25",
+                        "baseLink": "https://www.mirraw.com/designers/vasu-sarees/designs",
+                        "vendorProductId": "purple-georgette-pakistani-salwar-kameez-pakistani-salwar-kameez--c6803b44-986c-4b98-8384-dcae00dfd000"
+                    },
+                    {
+                        "vendorId": "vendor3",
+                        "vendorName": "Amazon",
+                        "price": "18",
+                        "baseLink": "https://www.amazon.in/gp/product",
+                        "vendorProductId": "B009WG85ZA"
+                    }
+            
+                ]
+            }
+        ]
+    };
+var sareeContainerDiv = document.getElementById("sareeContainer");
+
+for(var i=0; i<data.products.length; i++) {
+
+var sareeDiv = document.createElement("div");
+sareeDiv.classList.add('saree');
+
+var imgDiv = document.createElement("img");
+imgDiv.src= data.products[i].imageFileName;
+imgDiv.classList.add('saree_img');
+sareeDiv.appendChild(imgDiv);
+
+// title
+var titleDiv = document.createElement("h2");
+var node1 = document.createTextNode(data.products[i].title);
+titleDiv.classList.add('saree_content');
+titleDiv.appendChild(node1);
+sareeDiv.appendChild(titleDiv);
+sareeContainerDiv.appendChild(sareeDiv);
+
+var para = document.createElement("div");
+var node = document.createTextNode(data.products[i].content);
+para.classList.add('saree_content');
+para.appendChild(node);
+sareeDiv.appendChild(para);
+sareeContainerDiv.appendChild(sareeDiv);
+}
+
+
+    function handleClick() {
+        window.scroll({
+            top: 0, left: 0,
+            behavior: "smooth"
+        })
+    }
+</script>
+
+</html>
